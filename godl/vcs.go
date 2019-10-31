@@ -125,8 +125,8 @@ var vcsGit = &vcsCmd{
 	name: "Git",
 	cmd:  "git",
 
-	createCmd:    []string{"clone {repo} {dir}", "-C {dir} submodule update --init --recursive"},
-	createRevCmd: []string{"clone {repo} {dir}", "-C {dir} submodule update --init --recursive", "-C {dir} checkout {rev}", "-C {dir} reset --hard {rev}"},
+	createCmd:    []string{"clone {repo} {dir}", "-c {dir} submodule update --init --recursive"},
+	createRevCmd: []string{"clone {repo} {dir}", "-c {dir} submodule update --init --recursive", "-C {dir} checkout {rev}", "-C {dir} reset --hard {rev}"},
 
 	scheme:     []string{"git", "https", "http", "git+ssh", "ssh"},
 	pingCmd:    "ls-remote {scheme}://{repo}",
